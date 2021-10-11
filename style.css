@@ -48,6 +48,7 @@ h1,
 h2,
 h3 {
   font-family: 'Playfair Display', serif;
+  font-weight: bold;
 }
 
 h1 {
@@ -57,13 +58,18 @@ h1 {
 
 h2 {
   font-size: 36px;
+  color: #3e606b;
 }
 
 h3 {
   font-size: 18px;
+  color: #3e606b;
 }
 
 header {
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -82,6 +88,7 @@ header {
   color: #242424;
   display: block;
   padding: 10px 15px;
+  cursor: pointer;
 }
 
 .navigation a:hover {
@@ -90,22 +97,11 @@ header {
   border-radius: 20px;
 }
 
-header,
-footer,
-section {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 section {
   padding: 80px 0;
-}
-header {
-  margin: 30px auto;
-  max-width: 1100px;
+  flex-basis: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .hero {
@@ -116,22 +112,48 @@ header {
 
 .hero__text {
   max-width: 1100px;
+}
+
+.hero__text h1 {
   padding-right: 40%;
 }
+
+.hero__text p {
+  padding-right: 40%;
+  font-size: 24px;
+  font-style: italic;
+}
+
 .welcome,
 .about-baking {
-  flex-basis: 100%;
   max-width: 1100px;
   flex-wrap: wrap;
+  display: flex;
+  align-items: center;
 }
 
 .welcome__right,
 .welcome__left {
-  flex-basis: 45%;
+  flex-basis: calc(100% / 2);
+  max-width: calc(1100px / 2);
 }
 
-.welcome__left {
-  padding-right: 30px;
+.welcome__right {
+  padding-left: 30px;
+}
+
+.welcome__button {
+  color: #ffffff;
+  background-color: #f195b2;
+  display: inline-block;
+  border-radius: 30px;
+  padding: 15px 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.welcome__button:hover {
+  background-color: #d2567d;
 }
 
 .today-offer {
@@ -139,46 +161,71 @@ header {
 }
 
 .today-offer__text {
-  flex-basis: 100%;
   max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.today-offer__title {
-  flex-basis: 100%;
-}
-
-.today-offer__item img {
+.today-offer__items {
+  display: flex;
   width: 100%;
 }
-.today-offer__item {
-  flex-basis: 22.9%;
+
+.item img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.item {
+  flex-basis: calc((100%-90px) / 4);
+  max-width: calc(1010px / 4);
   display: flex;
   flex-direction: column;
   margin-right: 30px;
   text-align: center;
+  border-radius: 5px;
+  background-color: #ffffff;
 }
 
-.today-offer__item:last-of-type {
+.item:last-of-type {
   margin-right: 0;
 }
 
-.today-offer__item h3 {
+.item h3 {
   padding: 20px;
   margin: 0;
 }
 
-.today-offer__item p {
-  padding: 0 20px;
+.item p {
+  padding: 0 20px 20px 20px;
   margin: 0;
+}
+
+.about-baking {
+  display: flex;
+  align-items: center;
 }
 
 .about-baking__right,
 .about-baking__left {
-  flex-basis: 45%;
+  flex-basis: calc(100% / 2);
+  max-width: calc(1100px / 2);
 }
 
-.about-baking__right {
-  padding-left: 30px;
+.about-baking__left {
+  padding-right: 30px;
+}
+
+.foto-baker,
+.foto-baking {
+  width: 100%;
+  border-radius: 5px;
+}
+
+footer {
+  width: 100%;
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #303339;
+  color: #ffffff;
 }
