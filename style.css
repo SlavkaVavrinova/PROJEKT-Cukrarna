@@ -108,6 +108,7 @@ section {
   background-image: url(images/cupcake.jpg);
   background-size: cover;
   color: #ffffff;
+  background-position: center center;
 }
 
 .hero__text {
