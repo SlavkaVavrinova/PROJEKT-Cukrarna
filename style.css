@@ -93,7 +93,7 @@ header {
 
 .navigation a:hover {
   color: #ffffff;
-  background-color: #d2567d;
+  background-color: #f195b2;
   border-radius: 20px;
 }
 
@@ -175,6 +175,7 @@ section {
 .item img {
   width: 100%;
   border-radius: 5px 5px 0 0;
+  aspect-ratio: 1/1;
 }
 .item {
   flex-basis: calc((100%-90px) / 4);
@@ -224,7 +225,7 @@ section {
 
 footer {
   width: 100%;
-  margin: 30px 0;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   background-color: #303339;
